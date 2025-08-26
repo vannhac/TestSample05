@@ -123,6 +123,7 @@ ul {
   top: 0;
   left: 0;
   right: 0;
+  background-color: var(--default-word);
 }
 .header__logo--img {
   height: 48px;
