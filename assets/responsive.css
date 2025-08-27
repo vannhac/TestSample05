@@ -2,13 +2,15 @@
 @media (min-width: 998px) {
   .nav__mobile,
   .menu-overlay,
-  .intro__item--mobile {
+  .intro__item--mobile,
+  .header__btn--mobile {
     display: none;
   }
 }
 /* Tablet  */
 @media (max-width: 997.98px) {
-  .nav {
+  .nav,
+  .header__btn--mobile {
     display: none;
   }
   .main-content {
