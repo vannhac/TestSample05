@@ -11,6 +11,8 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
       rel="stylesheet"
     />
+    <!-- font-awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- reset css -->
     <link rel="stylesheet" href="./assets/reset.css" />
 
@@ -24,7 +26,7 @@
     <header id="header">
       <div class="header__nav flex-between main-content">
         <a
-          href="https://vannhac.github.io/TestSample05/"
+          href="./index.html"
           class="header__logo flex-between"
         >
           <span class="header__logo--img flex-middle">
@@ -100,6 +102,47 @@
             </svg>
             +1-202-555-0120
           </a>
+            <!-- Tablet, mobile header -->
+        <div class="nav__mobile">
+          <input type="checkbox" name="checkbox" id="menu-checkbox" class="menu-checkbox" hidden>
+
+          <label for="menu-checkbox">
+            <span class="list__btn"><i class="fa-solid fa-bars"></i></span>
+          </label>
+ <!-- overlay -->
+     <label for="menu-checkbox" class="menu-overlay"></label>
+     <!-- nav mobile -->
+     <div class="menu-drawer ">
+<div class="menu-drawer__top flex-between">
+ <a
+          href="./index.html"
+          class="header__logo flex-between"
+        >
+          <span class="header__logo--img flex-middle">
+            <svg
+              width="14"
+              height="17"
+              viewBox="0 0 14 17"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.7589 6.8C13.7589 6.88 13.7269 6.952 13.6629 7.016C13.6149 7.064 13.5509 7.088 13.4709 7.088H11.6949C11.5989 7.088 11.5509 7.128 11.5509 7.208L11.0949 10.088C11.0949 10.168 11.1269 10.208 11.1909 10.208H12.6069C12.6869 10.208 12.7509 10.24 12.7989 10.304C12.8629 10.352 12.8949 10.416 12.8949 10.496V12.296C12.8949 12.376 12.8629 12.448 12.7989 12.512C12.7509 12.56 12.6869 12.584 12.6069 12.584H10.8309C10.7349 12.584 10.6869 12.624 10.6869 12.704L10.1589 16.184C10.1429 16.36 10.0389 16.448 9.84691 16.448L7.63891 16.424C7.44691 16.424 7.35891 16.32 7.37491 16.112L7.90291 12.704C7.90291 12.624 7.87091 12.584 7.80691 12.584H4.92691C4.83091 12.584 4.78291 12.624 4.78291 12.704L4.25491 16.184C4.23891 16.36 4.13491 16.448 3.94291 16.448L1.73491 16.424C1.54291 16.424 1.45491 16.32 1.47091 16.112L1.99891 12.704C1.99891 12.624 1.96691 12.584 1.90291 12.584H0.510906C0.430906 12.584 0.358906 12.56 0.294906 12.512C0.246906 12.448 0.222906 12.376 0.222906 12.296V10.496C0.222906 10.416 0.246906 10.352 0.294906 10.304C0.358906 10.24 0.430906 10.208 0.510906 10.208H2.26291C2.35891 10.208 2.40691 10.168 2.40691 10.088L2.83891 7.208C2.83891 7.128 2.80691 7.088 2.74291 7.088H1.39891C1.31891 7.088 1.24691 7.064 1.18291 7.016C1.13491 6.952 1.11091 6.88 1.11091 6.8V4.976C1.11091 4.896 1.13491 4.832 1.18291 4.784C1.24691 4.72 1.31891 4.688 1.39891 4.688H3.12691C3.22291 4.688 3.27091 4.648 3.27091 4.568L3.79891 1.088C3.81491 0.911999 3.91891 0.823999 4.11091 0.823999L6.31891 0.847999C6.51091 0.847999 6.59891 0.951999 6.58291 1.16L6.05491 4.568C6.05491 4.648 6.08691 4.688 6.15091 4.688H9.03091C9.12691 4.688 9.17491 4.648 9.17491 4.568L9.70291 1.088C9.71891 0.911999 9.82291 0.823999 10.0149 0.823999L12.2229 0.847999C12.4149 0.847999 12.5029 0.951999 12.4869 1.16L11.9589 4.568C11.9589 4.648 11.9909 4.688 12.0549 4.688H13.4949C13.5749 4.688 13.6389 4.72 13.6869 4.784C13.7509 4.832 13.7829 4.896 13.7829 4.976L13.7589 6.8ZM8.16691 10.208C8.26291 10.208 8.31091 10.168 8.31091 10.088L8.74291 7.208C8.74291 7.128 8.71091 7.088 8.64691 7.088H5.79091C5.69491 7.088 5.64691 7.128 5.64691 7.208L5.19091 10.088C5.19091 10.168 5.22291 10.208 5.28691 10.208H8.16691Z"
+                fill="#2DB24A"
+              />
+            </svg>
+          </span>
+
+          <span class="author__name ml-12">Robert Warren</span></a
+        >
+  <label for="menu-checkbox" class="menu__close"><i class="fa-solid fa-circle-xmark"></i></label>
+</div>
+  
+      <ul class="nav__list--mobile">
+        
+      </ul>
+      
+   
         </div>
       </div>
     </header>
@@ -1757,7 +1800,7 @@
     <footer id="footer">
       <div class="footer__container flex-between main-content">
         <a
-          href="https://vannhac.github.io/TestSample05/"
+          href="./index.html"
           class="header__logo footer__logo flex-between"
         >
           <span class="header__logo--img flex-middle">
@@ -1778,7 +1821,7 @@
           <span class="author__name ml-12">Robert Warren</span></a
         >
         <div class="footer__right flex-between">
-          <nav class="nav">
+          <nav class="footer__nav">
             <ul class="nav__list flex-between">
               <li class="nav__item">
                 <a href="#main" class="nav__link nav__link--footer active"
@@ -1810,5 +1853,6 @@
         </div>
       </div>
     </footer>
+    <script src="./main.js"></script>
   </body>
 </html>

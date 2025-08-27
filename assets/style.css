@@ -130,7 +130,7 @@ ul {
   background-color: var(--default-word);
 }
 .header__nav {
-  padding: 0;
+  padding: 0 !important;
 }
 .header__logo--img {
   height: 48px;
@@ -158,7 +158,7 @@ ul {
   color: var(--gray-87);
   line-height: 2.4rem;
   font-size: 1.6rem;
-  transition: color 0.5s ease;
+  transition: 0.5s ease;
 }
 .nav__link:hover,
 .nav__link.active {
