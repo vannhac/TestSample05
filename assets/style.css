@@ -74,6 +74,7 @@ textarea {
 }
 /* ko nên dùng line-height vì nó sẽ ko tính border */
 .btn {
+  white-space: nowrap;
   border-radius: 100px;
   padding: 10px min(2vw, 3rem);
   font-size: clamp(1.4rem, 2vw, 1.6rem);
@@ -82,7 +83,9 @@ textarea {
   color: var(--white);
   border: 2px solid var(--primary-color);
   cursor: pointer;
-
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   transition: 0.5s ease;
 }
 .btn:hover {
@@ -118,12 +121,16 @@ ul {
 #header {
   padding: 0;
   padding-top: 24px;
+  padding-bottom: 24px;
   position: fixed;
   z-index: 3;
   top: 0;
   left: 0;
   right: 0;
   background-color: var(--default-word);
+}
+.header__nav {
+  padding: 0;
 }
 .header__logo--img {
   height: 48px;
@@ -140,8 +147,6 @@ ul {
 .header__right,
 .nav__list {
   gap: min(2vw, 2.4rem);
-}
-.nav {
 }
 
 .nav__item {
@@ -160,8 +165,7 @@ ul {
   font-weight: 600;
   color: var(--white);
 }
-.header__btn {
-}
+
 .header__phone-icon {
   margin-right: 12px;
 }
@@ -193,9 +197,9 @@ ul {
 }
 .intro__cta {
   margin-top: 32px;
+  display: flex;
 }
-.intro__btn {
-}
+
 .intro__btn--contact {
   background-color: transparent;
   border: 2px solid var(--white);
@@ -203,8 +207,7 @@ ul {
   padding-top: 12px;
   padding-bottom: 12px;
 }
-.intro__bottom {
-}
+
 .intro__item {
   gap: min(1.3vw, 24px);
   top: 560px;
@@ -270,20 +273,19 @@ ul {
   line-height: 2.4rem;
 }
 .about__social {
+  justify-content: flex-start;
   margin-top: 32px;
-  gap: min(2vw, 24px);
-}
-.about__btn {
+  gap: min(1.3vw, 24px);
 }
 .social__list {
-  gap: 8px;
+  gap: min(0.5vw, 8px);
 }
 .social__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 48px;
-  height: 48px;
+  width: min(3.7vw, 48px);
+  height: min(3.7vw, 48px);
   border: 2px solid var(--green-50);
   border-radius: 50%;
   background-color: var(--white);
@@ -297,12 +299,7 @@ ul {
   border-color: var(--primary-color);
 }
 /*=============================== introduction=============================== */
-.about__left {
-}
-.about__leftgale__title {
-}
-.about__leftheading-lv2 {
-}
+
 .gale__title {
   width: 32.15%;
 }
@@ -344,26 +341,25 @@ ul {
   width: 34.4%;
 }
 .service__item {
-  border: 1px solid var(--border-color);
-  padding: min(2vw, 32px);
+  border: 2px solid transparent;
+  outline: 1px solid var(--primary-color);
+  padding: clamp(1rem, 1.65vw, 3rem);
   cursor: pointer;
-  transition: 0.5s ease;
+  transition: border 0.5s ease, box-shadow 0.5s ease, outline 0.5s ease;
   display: flex;
   gap: min(1.3vw, 2.4rem);
 }
 .service__item:hover {
-  border: 2px solid var(--primary-color);
+  border-color: var(--primary-color);
+  outline: o solid transparent;
   box-shadow: 0 4px 2.4rem hsla(133, 60%, 44%, 0.08);
 }
-.service__icon {
-}
-.service__content {
-}
+
 .ser__heading {
   font-size: clamp(1.8rem, 2vw, 2rem);
   line-height: 2.8rem;
   font-weight: 500;
-  margin-bottom: 12px;
+  margin-bottom: min(0.9vw, 1.2rem);
   white-space: nowrap;
 }
 .service__right {
@@ -372,10 +368,9 @@ ul {
   width: min(948px, 57%);
 }
 .ser__img {
-  width: min(16.5vw, 312px);
-  max-width: 100%;
+  width: min(20vw, 312px);
   object-fit: cover;
-  height: 100%;
+  min-height: 417px;
 }
 /*=============================== Pricing=============================== */
 #price {
@@ -388,6 +383,21 @@ ul {
 .price__item {
   background-color: var(--white);
   padding: min(2.8vw, 48px);
+}
+.price__re {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  padding: 6px 16px 8px;
+  color: var(--primary-color);
+  background-color: var(--white);
+  border: 1.5px solid #d5f0db;
+  display: inline-block;
+  right: min(2.8vw, 48px);
+  padding: 5px 15px 7px;
+}
+.price__re:hover {
+  opacity: 1;
+  cursor: auto;
 }
 .heading__price {
   color: var(--primary-color);
@@ -435,7 +445,6 @@ ul {
   border: 2px solid var(--primary-color);
   margin-top: 32px;
   transition: 0.5s ease;
-  text-align: center;
 }
 .pri__btn:hover {
   color: var(--white);
@@ -551,6 +560,7 @@ path {
   font-size: 1.6rem;
   line-height: 2.4rem;
   font-weight: 500;
+  color: var(--default-word);
 }
 .contact__social {
   padding: min(1.7vw, 32px);
@@ -647,7 +657,7 @@ path {
 }
 .footer__container {
   padding: 0;
-  gap: 274px;
+  gap: min(14vw, 274px);
 }
 #footer .author__name {
   color: var(--default-word);
