@@ -388,7 +388,7 @@
     padding-left: 0;
   }
   .contact__social {
-    padding: 2.4rem;
+    padding: 9px;
   }
   .contact__info {
     padding-bottom: min(4vw, 49px);
@@ -406,6 +406,7 @@
   #cus__mes {
     width: 100%;
     padding-left: 9px;
+    font-size: 1.4rem;
   }
   .contact__btn {
     margin-top: 18px;
@@ -420,8 +421,12 @@
     flex-direction: column;
     gap: 10px;
   }
+  .footer__nav {
+    width: 100%;
+  }
   #footer .nav__link {
     padding: 0;
+    font-size: 1.6rem;
   }
   .copy_right {
     font-size: 1.6rem;
