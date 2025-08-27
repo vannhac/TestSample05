@@ -76,17 +76,19 @@ textarea {
 .btn {
   white-space: nowrap;
   border-radius: 100px;
-  padding: 10px min(2vw, 3rem);
+  padding: 0 min(2vw, 3.2rem);
   font-size: clamp(1.4rem, 2vw, 1.6rem);
   font-weight: 600;
   background-color: var(--primary-color);
   color: var(--white);
-  border: 2px solid var(--primary-color);
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
+  border: none;
+  line-height: 48px;
   align-items: center;
   transition: 0.5s ease;
+  max-height: 48px;
 }
 .btn:hover {
   opacity: 0.8;
@@ -188,7 +190,7 @@ ul {
   width: 40%;
 }
 .intro__content {
-  width: 40%;
+  width: 40.5%;
 }
 .intro__desc {
   color: var(--gray-c3);
@@ -200,12 +202,10 @@ ul {
   display: flex;
 }
 
-.intro__btn--contact {
+.btn--contact {
   background-color: transparent;
   border: 2px solid var(--white);
   transition: 0.5s ease;
-  padding-top: 12px;
-  padding-bottom: 12px;
 }
 
 .intro__item {
@@ -230,14 +230,15 @@ ul {
   width: 100%;
 }
 .achievement {
-  left: min(1vw, 36px);
-  top: min(1vw, 36px);
-  bottom: min(1vw, 36px);
+  left: min(2vw, 36px);
+  top: min(2vw, 36px);
+  bottom: min(2vw, 36px);
   padding: 4px 24px;
+  padding-right: 54px;
   background-color: var(--white);
 }
 .achievement__section {
-  padding: min(1vw, 20px) 0;
+  padding: clamp(1.2rem, 1.2vw, 2rem);
   border-bottom: 1px solid var(--border-color);
 }
 .achievement__section.last {
@@ -246,7 +247,7 @@ ul {
 .achieve__heading {
   color: var(--default-word);
   font-size: clamp(1.8rem, 2.3vw, 2.4rem);
-  line-height: 3.2rem;
+  line-height: clamp(2.6rem, 2vw, 3.2rem);
   font-weight: 600;
 }
 .achieve__desc {
@@ -256,7 +257,8 @@ ul {
   margin-top: 4px;
 }
 .about__right {
-  width: 40%;
+  width: 40.5%;
+  align-self: center;
 }
 .about__row {
   margin-bottom: 12px;
@@ -307,6 +309,7 @@ ul {
   background-color: var(--white);
   color: var(--primary-color);
   transition: 0.5s ease;
+  border: 2px solid var(--primary-color);
 }
 
 .gallery__result {
@@ -330,6 +333,8 @@ ul {
 }
 .service__main {
   margin-top: 50px;
+  justify-content: flex-start;
+  gap: min(7.5vw, 136px);
   width: 1620px;
   max-width: calc(100% - calc((100% - min(1320px, calc(100% - 60px))) / 2));
   /* cách tính margin left */
@@ -338,7 +343,7 @@ ul {
 .service__left {
   display: grid;
   gap: min(1.3vw, 2.4rem);
-  width: 34.4%;
+  width: 33.4%;
 }
 .service__item {
   border: 2px solid transparent;
@@ -520,11 +525,12 @@ path {
   gap: min(3vw, 56px);
   /* padding-bottom: 0; */
   background-color: var(--white);
+  align-items: flex-start;
 }
 .contact__info {
-  padding-right: min(4vw, 49px);
+  padding-right: min(4vw, 5.9rem);
   border-right: 1px solid var(--border-color);
-  width: 39.2%;
+  width: 40%;
 }
 .contact__heading {
   font-weight: 500;
@@ -539,6 +545,9 @@ path {
   gap: min(1.2vw, 1.6rem);
   margin-top: 32px;
   justify-content: start;
+}
+.contact__row:nth-of-type(2) {
+  margin-top: 24px;
 }
 
 .contact-icon {
@@ -579,8 +588,10 @@ path {
   display: block;
 }
 .social__list--contact {
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
+  padding-left: 36px;
+  gap: min(0.7vw, 1.2rem);
 }
 .social__list--contact::after {
   position: absolute;
@@ -590,10 +601,12 @@ path {
   width: min(1.7vw, 2.4rem);
   height: 2px;
   left: 0;
+
   top: 50%;
 }
 .contact__right {
   width: 55.14%;
+  padding-top: 20px;
 }
 .heading__form {
   font-size: clamp(1.8rem, 2.3vw, 2.4rem);
@@ -613,7 +626,7 @@ path {
   font-size: 1.6rem;
   line-height: 2.4rem;
   color: var(--gray-87);
-  padding: 12px 0;
+  padding: 11px 0;
   padding-left: 18px;
   outline: none;
 }
@@ -630,6 +643,9 @@ path {
   padding-right: 22px;
   width: 100%;
 }
+#cus__time::placeholder {
+  color: var(--gray-55);
+}
 #cus__mes {
   height: 124px;
 }
@@ -638,7 +654,6 @@ path {
 }
 .contact__btn {
   margin-top: 32px;
-  padding: 10px min(2vw, 2.9rem);
 }
 .pri-arrow {
   right: min(1.3vw, 2.2rem);
@@ -646,10 +661,12 @@ path {
   transform: translateY(-50%);
 }
 .calen-icon {
-  right: min(1.3vw, 2.1rem);
-  top: 50%;
+  right: min(1.3vw, 18px);
+  top: 44%;
+
   transform: translateY(-50%);
 }
+
 /*=============================== Footer=============================== */
 #footer {
   background-color: var(--back-color);
@@ -657,7 +674,7 @@ path {
 }
 .footer__container {
   padding: 0;
-  gap: min(14vw, 274px);
+  gap: min(14.5vw, 274px);
 }
 #footer .author__name {
   color: var(--default-word);
