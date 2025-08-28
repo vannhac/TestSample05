@@ -349,6 +349,7 @@ ul {
 }
 .service__main {
   margin-top: 50px;
+  padding: 2px;
   justify-content: flex-start;
   gap: min(7.5vw, 136px);
   width: 1620px;
