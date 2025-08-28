@@ -251,7 +251,7 @@
     width: 40px;
     height: 40px;
     top: 29%;
-    right: 22%;
+    right: min(22%, 8.6rem);
   }
   .header__logo--img {
     height: 35px;
@@ -319,11 +319,12 @@
   }
   .about__social {
     flex-direction: column;
-    align-items: flex-start;
     gap: 20px;
   }
   .social__list {
     width: 100%;
+    justify-content: center;
+    gap: 8px;
   }
   /* gallery */
   .gallery__intro {
