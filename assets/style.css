@@ -248,7 +248,6 @@ ul {
 .achievement {
   left: min(2vw, 36px);
   top: min(2vw, 36px);
-  bottom: min(2vw, 36px);
   padding: 4px 24px;
   padding-right: 15px;
   background-color: var(--white);
@@ -256,6 +255,8 @@ ul {
 .achievement__section {
   padding: clamp(1.2rem, 1.2vw, 2rem);
   border-bottom: 1px solid var(--border-color);
+  padding-left: 0;
+  padding-right: min(2vw, 37px);
 }
 .achievement__section.last {
   border: none;
