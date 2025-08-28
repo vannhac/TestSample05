@@ -18,6 +18,7 @@
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   color: var(--default-word);
@@ -77,7 +78,7 @@ textarea {
   white-space: nowrap;
   border-radius: 100px;
   padding: 0 min(2vw, 3.2rem);
-  font-size: clamp(1.4rem, 2vw, 1.6rem);
+  font-size: clamp(1.3rem, 2vw, 1.6rem);
   font-weight: 600;
   background-color: var(--primary-color);
   color: var(--white);
@@ -119,7 +120,21 @@ ul {
   margin-top: 20px;
 }
 /* header */
-
+.mode__toggle {
+  position: fixed;
+  right: min(3.3vw, 63px);
+  bottom: min(8.2vw, 155px);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  border: 2px solid var(--white);
+  transition: filter 0.5s ease, border-color 0.5s ease;
+  cursor: pointer;
+}
+.mode__toggle:hover {
+  filter: brightness(1.2);
+}
 #header {
   padding: 0;
   padding-top: 24px;
@@ -179,6 +194,7 @@ ul {
   background: url(../img/introduction/Header.png) center/cover no-repeat;
   height: 836px;
   position: relative;
+  overflow-x: clip;
 }
 .intro__top {
   padding: 0;
@@ -211,9 +227,9 @@ ul {
 .intro__item {
   gap: min(1.3vw, 24px);
   top: 560px;
-  width: 1920px;
+  width: 1993px;
   max-width: 100%;
-  overflow: hidden;
+  left: -49px;
 }
 .intro__img {
   width: min(16.5vw, 312px);
@@ -234,7 +250,7 @@ ul {
   top: min(2vw, 36px);
   bottom: min(2vw, 36px);
   padding: 4px 24px;
-  padding-right: 54px;
+  padding-right: 15px;
   background-color: var(--white);
 }
 .achievement__section {
@@ -337,8 +353,8 @@ ul {
   gap: min(7.5vw, 136px);
   width: 1620px;
   max-width: calc(100% - calc((100% - min(1320px, calc(100% - 60px))) / 2));
-  /* cách tính margin left */
   margin-left: calc((100% - min(1320px, calc(100% - 60px))) / 2);
+  overflow: hidden;
 }
 .service__left {
   display: grid;
@@ -369,7 +385,6 @@ ul {
 }
 .service__right {
   gap: min(1.3vw, 2.4rem);
-  overflow: hidden;
   width: min(948px, 57%);
 }
 .ser__img {
@@ -473,6 +488,10 @@ path {
 }
 .blog__img {
   max-width: 100%;
+  transition: scale 0.5s ease;
+}
+.blog__img:hover {
+  scale: 1.1;
 }
 /*=============================== Ins=============================== */
 .ins__container {
