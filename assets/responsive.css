@@ -162,8 +162,11 @@
     flex-direction: column;
     /* text-align: center; */
   }
+  .price__item {
+    min-height: auto;
+  }
   .pri__btn {
-    width: 50%;
+    width: 100%;
   }
   /* ins */
   .ins__container {
@@ -293,6 +296,9 @@
   }
   /* about */
   .about__left {
+    width: 100%;
+  }
+  .about__btn {
     width: 100%;
   }
   .achieve__heading {

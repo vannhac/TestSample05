@@ -177,9 +177,13 @@ ul {
   font-size: 1.6rem;
   transition: 0.5s ease;
 }
-.nav__link:hover,
+
 .nav__link.active {
   font-weight: 600;
+  color: var(--white);
+}
+.nav__link:hover {
+  text-shadow: 0 0 0 currentColor;
   color: var(--white);
 }
 
@@ -190,9 +194,8 @@ ul {
 /*=============================== introduction=============================== */
 .introduction {
   padding-top: 244px;
-  padding-bottom: 20px;
-  background: url(../img/introduction/Header.png) center/cover no-repeat;
-  height: 836px;
+  padding-bottom: 424px;
+  background: url(../img/introduction/Header.png) center / cover no-repeat;
   position: relative;
   overflow-x: clip;
 }
@@ -365,7 +368,7 @@ ul {
 }
 .service__item {
   border: 2px solid transparent;
-  outline: 1px solid var(--primary-color);
+  outline: 1px solid var(--border-color);
   padding: clamp(1rem, 1.65vw, 3rem);
   cursor: pointer;
   transition: border 0.5s ease, box-shadow 0.5s ease, outline 0.5s ease;
@@ -374,7 +377,7 @@ ul {
 }
 .service__item:hover {
   border-color: var(--primary-color);
-  outline: o solid transparent;
+  outline: 0 solid transparent;
   box-shadow: 0 4px 2.4rem hsla(133, 60%, 44%, 0.08);
 }
 
@@ -405,7 +408,12 @@ ul {
 .price__item {
   background-color: var(--white);
   padding: min(2.8vw, 48px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 617px;
 }
+
 .price__re {
   font-size: 1.4rem;
   line-height: 2rem;
@@ -444,7 +452,9 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+  flex: 1;
 }
+
 .limit__desc {
   font-size: clamp(1.4rem, 2vw, 1.6rem);
   line-height: 2.4rem;
